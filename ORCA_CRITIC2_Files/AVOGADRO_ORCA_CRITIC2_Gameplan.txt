@@ -1,0 +1,17 @@
+SMILES
+→ Avogadro (GAFF, quick optimise) 
+→ ORCA (B3LYP/6-31+G** Opt) → geometry
+
+CDFT (Orbital oriented)
+→ Fukui+ = LUMO^2 
+→ Fukui- = HOMO^2 
+ 
+CDFT (SP)
+→ ORCA SP (N, N+1, N−1) → energies → hardness
+→ ORCA SP (N, N+1, N−1) → densities → cube files (ρ_N, ρ_N+1, ρ_N−1) 
+
+Per-Atom Resolution
+→ Critic2 (QTAIM partitioning)
+→ Condensed Fukui (per atom)
+→ Python → Gini index
+

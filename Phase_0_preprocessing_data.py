@@ -25,10 +25,10 @@ import os
 # =============================================================================
 # Configuration
 # =============================================================================
-DUCKDB_PATH = "ALL_DATA/Raw_data/QM9.duckdb"
+DUCKDB_PATH = "ALL_DATA/Raw_data/RedDB_pair_complete.duckdb"
 
-OUTPUT_DIR_RAW = "ALL_DATA/Raw_data/raw_raw_export.csv"
-OUTPUT_DIR_CLEAN = "ALL_DATA/Raw_data/cleaned_export.csv"
+OUTPUT_DIR_RAW = "ALL_DATA/Raw_data/"
+OUTPUT_DIR_CLEAN = "ALL_DATA/Raw_data/"
 
 MISSING_COL_THRESHOLD = 0.50
 

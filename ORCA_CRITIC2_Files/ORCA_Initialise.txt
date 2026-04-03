@@ -1,0 +1,3 @@
+alias useorca='export ORCA_HOME=$HOME/apps/orca; export PATH=$ORCA_HOME:$PATH'
+
+# Then after this, just use useorca everytime u wanna run / initialise that per terminal.
