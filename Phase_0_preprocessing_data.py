@@ -101,6 +101,27 @@ def preprocess_dataframe(df: pd.DataFrame) -> pd.DataFrame:
     for col in text_cols:
         df[col] = df[col].fillna("missing")
 
+    # -------------------------------------------------------------------------
+    # Drop columns with too many missing values
+    # -------------------------------------------------------------------------
+    missing_fraction = df.isna().mean()
+
+    cols_to_drop = missing_fraction[missing_fraction > MISSING_COL_THRESHOLD].index.tolist()
+
+    print("\n=== Missingness Report ===")
+    print(missing_fraction.sort_values(ascending=False))
+
+    print(f"\nColumns exceeding threshold ({MISSING_COL_THRESHOLD:.0%}): {len(cols_to_drop)}")
+
+    if cols_to_drop:
+        print("Dropped columns:")
+        for col in cols_to_drop:
+            print(f" - {col} (missing: {missing_fraction[col]:.2%})")
+
+        df = df.drop(columns=cols_to_drop)
+    else:
+        print("No columns dropped.")
+
     return df
 
 

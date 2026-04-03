@@ -1,0 +1,77 @@
+Connecting to DuckDB...
+
+Found 2 tables:
+ - qm9dual
+ - qm9summary
+
+================ Processing: qm9dual ================
+Shape (raw): (2323166, 12)
+
+=== Missingness Report ===
+field1        0.0
+mol_id        0.0
+smiles        0.0
+atom_name     0.0
+atom_id       0.0
+x             0.0
+y             0.0
+z             0.0
+pop           0.0
+lap           0.0
+dual          0.0
+net_charge    0.0
+dtype: float64
+
+Columns exceeding threshold (50%): 0
+No columns dropped.
+Shape (clean): (2323166, 12)
+Saved -> ALL_DATA/Raw_data/cleaned_export.csv/qm9dual_clean.csv
+
+================ Processing: qm9summary ================
+Shape (raw): (128294, 36)
+
+=== Missingness Report ===
+field1           0.0
+unnamed:0        0.0
+u298_atom        0.0
+h298_atom        0.0
+g298_atom        0.0
+molecule_name    0.0
+count            0.0
+mean             0.0
+std              0.0
+min              0.0
+25%              0.0
+50%              0.0
+75%              0.0
+max              0.0
+gini_p           0.0
+gini_n           0.0
+f_n_avg          0.0
+u0_atom          0.0
+cv               0.0
+g298             0.0
+alpha            0.0
+mol_id           0.0
+smiles           0.0
+a                0.0
+b                0.0
+c                0.0
+mu               0.0
+homo             0.0
+h298             0.0
+lumo             0.0
+gap              0.0
+r2               0.0
+zpve             0.0
+u0               0.0
+u298             0.0
+f_p_avg          0.0
+dtype: float64
+
+Columns exceeding threshold (50%): 0
+No columns dropped.
+Shape (clean): (128294, 36)
+Saved -> ALL_DATA/Raw_data/cleaned_export.csv/qm9summary_clean.csv
+
+Done. All tables exported and cleaned.
